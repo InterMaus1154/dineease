@@ -1,0 +1,114 @@
+.Contact-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 2rem;
+    padding: 2.5rem;
+}
+
+.Contact-information-box{
+    background-color: #7c3aed;
+    color: #fff;
+    padding: 3rem 2rem;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: space-between;
+    overflow: clip;
+    position: relative;
+}
+
+.Contact-information-box::before{
+    content: '';
+    position: absolute;
+    --size: 350px;
+    right: calc(calc(var(--size) / 2) * -1);
+    bottom: calc(calc(var(--size) / 2) * -1);
+
+    width: var(--size);
+    height: var(--size);
+    background-color: #c4b5fd60;
+    border-radius: 50%;
+
+}
+
+.Contact-information-box::after{
+    content: '';
+    position: absolute;
+    right: 50px;
+    bottom:50px;
+    --smaller-size: 175px;
+    width: var(--smaller-size);
+    height: var(--smaller-size);
+    background-color: #c4b5fd60;
+    border-radius: 50%;
+}
+
+.Contact-information-box-info-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Contact-information-box-info-wrapper a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Contact-information-box-info-wrapper img{
+     max-width: 20px;
+}
+
+.Contact-form{
+    display: flex;
+    flex-wrap: wrap;
+    --form-gap: 1rem;
+    gap: var(--form-gap);
+    margin-top: 1rem;
+}
+
+.Contact-form input[type="text"]{
+    flex-basis: calc(50% - var(--form-gap));
+    flex-grow: 1;
+    background-color: #f5f5f5;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    height: 35px;
+    padding: .25rem;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #676767;
+}
+
+.Contact-form textarea{
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    flex-basis: 100%;
+    resize: none;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #676767;
+    padding: .25rem;
+}
+
+.Contact-form input[type="submit"]{
+    margin-left: auto;
+    background-color: #7c3aed;
+    padding: 1rem 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.Contact-form input[type="submit"]:hover{
+    background-color: #c4b5fd;
+}
+
+.Contact-form input[type="submit"]:focus-visible{
+    outline: 3px solid orangered;
+}

@@ -1,0 +1,204 @@
+
+
+/*FEATURED RESTAURANTS SECTION*/
+.Featured-restaurants {
+    padding: 2rem;
+}
+
+.Featured-restaurants > h2 {
+    font-weight: lighter;
+    font-size: 1.125rem;
+}
+
+.Restaurant-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    gap: 2rem;
+    padding: 1rem;
+
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .Featured-restaurants > h1, .Featured-restaurants > h2 {
+        text-align: center;
+    }
+
+    .Featured-restaurants > h1 {
+        padding-top: 1rem;
+        border-top: 1px solid lightgray;
+    }
+}
+
+/*background decoration on desktop view*/
+@media (min-width: 768px) {
+    .Featured-restaurants .Restaurant-boxes::before {
+        content: '';
+        position: absolute;
+        right: -100px;
+        top: -100px;
+
+        width: 350px;
+        height: 350px;
+        background-color: #ede9fe;
+        z-index: -1;
+        isolation: isolate;
+        border-radius: 50%;
+    }
+
+    .Featured-restaurants .Restaurant-boxes::after {
+        content: '';
+        position: absolute;
+        left: -100px;
+        bottom: -100px;
+
+        width: 350px;
+        height: 350px;
+        background-color: #ede9fe;
+        z-index: -1;
+        isolation: isolate;
+        border-radius: 50%;
+    }
+
+    .Restaurant-boxes {
+        padding: 2.5rem;
+    }
+}
+
+
+.Restaurant-box {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px 1px lightgray;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Restaurant-box .Restaurant-image img {
+    border-radius: 8px;
+    max-height: 225px;
+    object-fit: cover;
+}
+
+.Restaurant-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.Restaurant-rating {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.Gray-star-icon img {
+    filter: grayscale(1);
+}
+
+.Star-icon-wrapper {
+    width: 25px;
+}
+
+.Restaurant-name {
+    font-size: 2rem;
+}
+
+.Restaurant-box button {
+    margin-top: auto;
+    margin-left: auto;
+    color: #7c3aed;
+    font-weight: bold;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.Restaurant-box button:hover {
+    color: #c4b5fd;
+}
+
+.Restaurant-description {
+    line-height: 1.5;
+    color: #676f7b;
+}
+
+/*FEATURED RESTAURANTS SECTION END*/
+
+
+
+/*RESTAURANTS SECTION BEGIN*/
+
+.Restaurants-section{
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Restaurants-section .Section-heading{
+    text-align: center;
+}
+
+.Restaurants-section .Section-subheading{
+    text-align: center;
+}
+
+.Search-form{
+    margin-top: 1rem;
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.Search-bar{
+    padding: .5rem 1.5rem .5rem 2rem;
+    position: relative;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    background-image: url("../assets/images/search_svg_black.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    color: #111827;
+    height: 35px;
+}
+
+.Search-button{
+    width: 35px;
+    height: 35px;
+    background-image: url("../assets/images/search_svg_purple.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: 0;
+    border: 1px solid lightgray;
+}
+
+.Search-button:focus-visible{
+    border: 1px solid orangered;
+}
+
+.Show-more-button{
+    color: #7c3aed;
+    font-weight: bold;
+    border: 0;
+    background: 0;
+    cursor: pointer;
+}
+
+.Show-more-button:hover{
+    color: #c4b5fd;
+}
+
+/*RESTAURANTS SECTION END*/

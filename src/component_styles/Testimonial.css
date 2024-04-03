@@ -1,0 +1,103 @@
+/*TESTIMONIAL SECTION BEGIN*/
+.Testimonial-section {
+    background-color: #ede9fe;
+    /*make the section be 100% width due to background*/
+    width: 100vw;
+    width: 100svw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.Testimonial-content {
+    /*content is re-constrained to max allowed width*/
+    max-width: var(--max-body-width);
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 5rem;
+    column-gap: 2.5rem;
+}
+
+.Testimonial-content .Section-heading {
+    position: relative;
+    grid-column: span 1;
+    grid-row: span 1;
+    align-self: end;
+}
+
+@media (max-width: 768px) {
+    .Testimonial-content {
+        grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+        grid-template-rows: auto;
+        gap: 1rem !important;
+    }
+
+    .Testimonial-box {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: auto !important;
+        justify-self: auto !important;
+        align-self: auto !important;
+    }
+}
+
+.Testimonial-content .Section-heading::before {
+    content: '';
+    position: absolute;
+    inset: -50% 0 0 -12%;
+    background-image: url("../assets/images/Quote mark.png");
+    background-repeat: no-repeat;
+}
+
+.Testimonial-box {
+    background-color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    width: 75%;
+    padding: 2rem 2.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    line-height: 1.5;
+    position: relative;
+    font-size: 1.25rem;
+}
+
+.Testimonial-box .Testimonial-box-content::before {
+    content: '';
+    position: absolute;
+    --quote-mark-size: 30px;
+    width: var(--quote-mark-size);
+    height: var(--quote-mark-size);
+    left: 5px;
+    background-image: url("../assets/images/Quote mark.png");
+    background-repeat: no-repeat;
+    background-size: var(--quote-mark-size);
+}
+
+.Testimonial-box .Testimonial-box-author {
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.Testimonial-box.Box-1 {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+.Testimonial-box.Box-2 {
+    align-self: center;
+    justify-self: end;
+}
+
+.Testimonial-box.Box-3 {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    justify-self: start;
+    align-self: center;
+}
+
+/*TESTIMONIAL SECTION END*/

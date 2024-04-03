@@ -1,0 +1,153 @@
+
+.About-us-section{
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.About-us-section .Section-heading, .About-us-section .Section-subheading{
+    text-align: center;
+}
+
+.Team-member-boxes{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.Team-member-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: calc(calc(100% / 5) + 1rem);
+    text-align: center;
+}
+
+.Team-member-role{
+    color: #7c7c7c;
+}
+
+.Team-member-image{
+    width: 100px;
+}
+
+.Timeline{
+    margin: 1rem calc(-50vw + 50%);
+    padding: 7rem 0;
+    width: 100vw;
+}
+
+.Timeline .Line{
+    background-color: #7c3aed;
+    width: 100%;
+    height: 3px;
+}
+
+.Timeline-events{
+    --grid-nums: 5;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-nums, 5), 1fr);
+}
+
+.Timeline-event{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: .25rem;
+}
+
+.Timeline-event-year{
+    color: #7c3aed;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.Timeline-event.Up{
+    transform: translateY(calc(-100% + 45px))!important;
+    flex-direction: column-reverse!important;
+}
+
+.Timeline-event.Down{
+    transform: translateY(-45px)!important;
+    flex-direction: column!important;
+}
+
+.Timeline-event-line{
+    width: 3px;
+    height: 100px;
+    background-color: #d9d9d9;
+    position: relative;
+}
+
+.Timeline-event.Up .Timeline-event-line{
+    transform: rotate(180deg);
+}
+
+.Timeline-event-line::before{
+    content: '';
+    background-color: #7c3aed;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: -10px;
+    top: -5px;
+    width: 25px;
+    height: 25px;
+}
+
+.Timeline-event-line::after{
+    content: '';
+    background-color: #d9d9d9;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: -3px;
+    bottom: -5px;
+    width: 10px;
+    height: 10px;
+}
+
+
+@media(max-width: 768px){
+    .Timeline-event-line{
+        height: 50px;
+    }
+}
+
+.Connect-section{
+    width: 100vw;
+    width: 100svw;
+    margin: 0 calc(-50vw + 50%);
+    margin: 0 calc(-50svw + 50%);
+
+    background-color: #7c3aed;
+    padding: 2.5rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: -2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Connect-section p{
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+.Connect-section a{
+    background-color: #fff;
+    padding: 1.25rem 2rem;
+    color: #7c3aed;
+    font-weight: bold;
+    border-radius: 6px;
+}

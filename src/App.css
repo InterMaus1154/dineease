@@ -1,0 +1,124 @@
+
+/*default CSS settings for all*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+:root{
+    --body-bg: #fcfcfc;
+}
+
+body{
+    --max-body-width: 1500px;
+    background-color: var(--body-bg);
+    /*fallback for browsers not compatible with svh*/
+    min-height: 100vh;
+    /*svh for better mobile support*/
+    min-height: 100svh;
+
+    font-family: 'Roboto', sans-serif;
+    max-width: var(--max-body-width);
+    margin: 0 auto;
+    color: #111827;
+    overflow-x: hidden;
+}
+
+@media(min-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.Hero{
+        margin-bottom : 10rem;
+    }
+
+}
+/*keyboard selection for links and buttons*/
+header a:focus-visible, .Hamburger:focus-visible, button:focus-visible{
+    outline: 2px solid darkorange;
+}
+
+/*global heading for each section*/
+h1.Section-heading{
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+h2.Section-subheading{
+    font-weight: lighter;
+    font-size: 1.125rem;
+}
+
+/*Loading spin for fetching content*/
+.Loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.Loading-spin{
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--body-bg), var(--body-bg)) padding-box, linear-gradient(to right, #7c3aed, var(--body-bg)) border-box;
+    border: 5px solid transparent;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    from {
+        rotate: 0;
+        transform: rotate(0deg);
+    }
+
+    to {
+        rotate: 360deg;
+        transform: rotate(360deg);
+    }
+}
+
+
+/*Only settings required for privacy policy page; separate file is redundant*/
+.Privacy-policy-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    line-height: 1.5;
+    padding: 2.5rem;
+    text-align: justify;
+}
+
+.Privacy-policy-section a{
+    color: #7c3aed;
+}
+
+/*Social icons*/
+.Social-icons{
+    display: flex;
+    gap: 1rem;
+}
+
+.Social-icons a{
+    min-width: 30px;
+}

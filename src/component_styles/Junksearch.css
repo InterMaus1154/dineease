@@ -1,0 +1,65 @@
+.Search-input-wrapper{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Filter-toggle-label{
+    display: block;
+    background-image: url("../assets/images/Filter Icon.png");
+    --toggle-width: 20px;
+    width: var(--toggle-width);
+    height: var(--toggle-width);
+    background-size: var(--toggle-width);
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    transform: translateY(-25%);
+    z-index: 2;
+}
+
+.Advanced-search-mode{
+    display: none;
+}
+
+#Filter-toggle{
+    display: none;
+}
+
+#Filter-toggle:checked ~ .Advanced-search-mode{
+    display: block!important;
+}
+
+#Filter-toggle:checked{
+    display: none;
+}
+
+#Filter-toggle-simple{
+    display: none;
+}
+
+#Filter-toggle:checked ~ .Advanced-input-wrapper{
+    display: flex;
+}
+
+#Filter-toggle:checked + .Search-bar.Simple{
+    display: none;
+}
+
+.Filter-toggle-label span{
+    display: none;
+    color: #7c3aed;
+    font-weight: bold;
+    cursor: pointer;
+    width: max-content;
+}
+
+.Filter-toggle-label:has(+ #Filter-toggle:checked){
+    background-image: none;
+}
+
+.Filter-toggle-label:has(+ #Filter-toggle:checked) span{
+    display: block;
+}
