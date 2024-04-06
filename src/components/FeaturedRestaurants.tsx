@@ -24,7 +24,7 @@ const FeaturedRestaurants: FC = () => {
     return (
         <section className="Featured-restaurants">
             <h1 className={"Section-heading"}>Featured restaurants</h1>
-            <h2 className={"Section-subheading"}>Discover Unforgettable Dining Destinations</h2>
+            <h2 className={"Section-subheading"}>Discover Unforgettable Dining Destinationsghg</h2>
             {
                 loading ? <Loading /> :
                     <div className="Restaurant-boxes">
